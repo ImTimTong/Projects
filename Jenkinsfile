@@ -1,4 +1,3 @@
-CODE_CHANGES = getGitChanges()
 def gv
 pipeline {
 
@@ -22,7 +21,7 @@ pipeline {
     stage("build") {
       steps {
         script {
-          gv.initApp()
+          gv.buildApp()
         }
       }
     }
@@ -34,19 +33,16 @@ pipeline {
         }
       }
       steps {
-        echo 'testing the app...'
+        script {
+          gv.testApp()
+        }
       }
     }
 
     stage("deploy") {
-
       steps {
-        echo 'deploying the app...'
-        echo "deploying version ${params.VERSION}"
-        withCredentials([
-          usernamePassword(credentials: 'server-credentials', usernameVariable: USER, passwordVariable: PWD)
-        ]) {
-          echo "deploying with ${USER} ${PWD}"
+        script {
+          gv.deployApp()
         }
       }
     }
