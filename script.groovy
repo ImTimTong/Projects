@@ -1,4 +1,4 @@
-def function() {
-  echo 'build app'
+def initApp() {
+  echo 'init app'
 }
 return this
