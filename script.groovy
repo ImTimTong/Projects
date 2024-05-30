@@ -1,13 +1,13 @@
-def buildApp() {
-  echo 'build app?'
+def build() {
+  echo 'Build Phase'
 }
 
-def testApp() {
-  echo 'test app'
+def test() {
+  echo 'Test Phase'
 }
 
-def deployApp() {
-  echo 'deploying the app...'
+def deploy() {
+  echo 'Deploy Phase'
 }
 
 return this
