@@ -1,13 +1,20 @@
+def getUserConfirmation(message) {
+  input message: message
+}
+
 def build() {
-  echo 'Build Phase'
+  getUserConfirmation('Proceed with build?')
+  echo 'Executing Build Phase'
 }
 
 def test() {
-  echo 'Test Phase'
+  getUserConfirmation('Proceed with test?')
+  echo 'Executing Test Phase'
 }
 
 def deploy() {
-  echo 'Deploy Phase'
+  getUserConfirmation('Proceed with deploy?')
+  echo 'Executing Deploy Phase'
 }
 
 return this
