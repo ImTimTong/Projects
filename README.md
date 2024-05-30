@@ -26,3 +26,6 @@ Efficiently manage tasks with this To-Do List Manager developed in Ruby. Add, re
 
 ## [Spreadsheet](https://imtimtong.github.io/Projects/Spreadsheet)
 Effectively organize data with this Spreadsheet program developed in C. Manage entries by name and age across different age groups. Features include duplicate checking, insertion, listing, and removal functions. Automatic data saving and thread safety ensure hassle-free usage.
+
+## [Movie Collection System](https://imtimtong.github.io/Projects/Movie-Collection-System)
+A system that manages movie collections, developed in Java. Allows users to search for movies by genre, director, or title, as well as add, remove, and view movies.
