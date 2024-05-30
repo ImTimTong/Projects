@@ -1,6 +1,6 @@
-# Shell Snippets 
+# Movie Collection System
 
-## [View Code](https://github.com/ImTimTong/Projects/tree/dev/Movie-Collection-System)
+## [View Code](https://github.com/ImTimTong/Projects/tree/main/Movie-Collection-System)
 
 ## Description
 A system that manages movie collections, developed in Java. Allows users to search for movies by genre, director, or title, as well as add, remove, and view movies.
