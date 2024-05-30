@@ -1,13 +1,13 @@
-def gv
+def execute
 pipeline {
 
   agent any
   
   stages {
-    stage("init") {
+    stage("start") {
       steps {
         script {
-          gv = load "script.groovy"
+          execute = load "pipeline_steps.groovy"
         }
       }
     }
@@ -15,7 +15,7 @@ pipeline {
     stage("build") {
       steps {
         script {
-          gv.buildApp()
+          execute.build()
         }
       }
     }
@@ -23,7 +23,7 @@ pipeline {
     stage("test") {
       steps {
         script {
-          gv.testApp()
+          execute.test()
         }
       }
     }
@@ -31,7 +31,7 @@ pipeline {
     stage("deploy") {
       steps {
         script {
-          gv.deployApp()
+          execute.deploy()
         }
       }
     }
