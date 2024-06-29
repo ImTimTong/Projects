@@ -1,0 +1,37 @@
+#!/usr/local/bin/bash
+
+# Description: These are some code from my .bashrc to help complete labs and projects faster.
+
+# Aliases to make, execute, and debug programs easily. Particularly from Deque Project, but could be applied for different cases with modifications.
+alias m='make clean all'
+alias z='./maze'
+alias q='./qsort /scratch/coen12/GreenEggsAndHam.txt'
+alias Z='gdb maze'
+alias Q='gdb qsort'
+alias c='reset'
+
+# Make a new version of target file and put to Desktop. Version updates each round. Currently referring to a file from some lab, but would modify the directory and filename in the function directly for different cases. Use rr function to reset version counter.
+counter=1
+cc() {
+	cp ~/Desktop/tree/tree.sml tree_c${counter}.sml
+	mv tree_c${counter}.sml ~/Desktop
+	((counter++))
+}
+
+# Reset counter to 1
+rr() {
+  counter=1
+}
+
+#Compile multiple C++ programs in the same project with the same filename but numbered: e.g. test1.cpp, test2.cpp, ..., test4.cpp. Currently for 4 files, would change the loop limit for different number of files.
+cm() {
+	for ((i=1; i<5; i++))
+	do	
+		g++ $1${i}.cpp -g -Wall -Werror -o $1${i}
+	done
+}
+
+# Quickly get into some folder in Desktop
+sd() {
+    cd ~/Desktop/$1
+}
